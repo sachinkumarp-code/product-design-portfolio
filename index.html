@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sachinkumar P — Product Designer</title>
+<meta name="description" content="Portfolio of Sachinkumar P: product design, AI products and human-centered technology.">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+</head><body>
+<nav><div class="wrap"><b>Sachinkumar P</b><div id="nv"><a href="#home" data-r="home">Home</a><a href="#work" data-r="work">Work</a><a href="#about" data-r="about">About</a><a href="#contact" data-r="contact">Contact</a></div></div></nav>
+
+<main class="wrap">
+<!-- HOME -->
+<section class="view" id="v-home">
+<div class="hero"><p class="lead" style="margin:0 0 14px">Product Designer · AI Product Builder · Human-Centered Technology</p>
+<h1>I build thoughtful digital experiences at the intersection of AI, technology and human needs.</h1>
+<p class="lead">I’m an early-career designer moving into product design from computational biology and software. I’ve built AI-powered tools end to end, and worked with clinicians to turn research requirements into a usable workflow. I’m now learning to design these experiences with the same rigor I bring to building them.</p>
+<a class="btn" href="#work">View my work</a><a class="btn ghost" href="/resume.pdf" target="_blank" rel="noopener">View resume</a></div>
+<h2 style="margin-top:1.6em">Featured projects</h2>
+<div class="grid">
+<a class="card" href="#cs1"><span class="tag">Research context</span><h3 style="margin-top:.4em">Clinician-facing histopathology annotation</h3><p>How expert pathologists review hard images and give labels that become ground truth.</p></a>
+<a class="card" href="#cs2"><span class="tag">Self project</span><h3 style="margin-top:.4em">AI document management</h3><p>Upload, version, compare and ask questions about documents.</p></a>
+<a class="card" href="#cs3"><span class="tag">Research demo</span><h3 style="margin-top:.4em">Medical image classification</h3><p>An upload-to-result flow for a brain MRI model, with honest limits.</p></a>
+<a class="card" href="#concept"><span class="tag c">Concept project</span><h3 style="margin-top:.4em">AI Learning Companion</h3><p>A self-initiated student experience for learning and placement readiness.</p></a></div>
+<h2>What sets me apart</h2>
+<div class="grid"><div class="card"><b>I can build it</b><p>FastAPI, Next.js, PyTorch and LangGraph let me prototype real behavior, not only screens.</p></div><div class="card"><b>I start from users</b><p>I translate domain requirements into workflows people can actually follow.</p></div><div class="card"><b>I’m honest about my stage</b><p>I mark what I shipped, what I contributed to, and what is a concept.</p></div></div>
+</section>
+
+<!-- WORK -->
+<section class="view" id="v-work"><div class="hero"><h1>Selected work</h1><p class="lead">Three projects from research and self-driven building, plus one design concept. Each page separates what I did from what I propose.</p></div>
+<div class="grid"><a class="card" href="#cs1"><h3>1. Annotation platform for clinicians</h3><p>Image-review workflow, with my exploratory design ideas.</p></a><a class="card" href="#cs2"><h3>2. AI document management</h3><p>Versioning, comparison and retrieval.</p></a><a class="card" href="#cs3"><h3>3. MRI classification demo</h3><p>Upload, processing and result states.</p></a><a class="card" href="#concept"><h3>4. AI Learning Companion</h3><p>Concept for student learning and placements.</p></a></div></section>
+
+<!-- CS1 -->
+<section class="view" id="v-cs1"><div class="hero" style="padding-bottom:0"><span class="tag">Research context · IIT Roorkee</span><h1>Clinician-facing histopathology annotation platform</h1>
+<p class="lead">A web-based image-labeling platform where clinicians review difficult H&amp;E histopathology images and give expert annotations.</p></div>
+<div class="facts"><div><span>My role</span>Contributor, not sole designer</div><div><span>Context</span>H&amp;E cardiac histopathology research</div><div><span>Working with</span>Clinical collaborators</div><div><span>Period</span>August 2026 – present</div></div>
+<div class="case-subnav" aria-label="Case study sections"><span>ON THIS PAGE</span><button data-jump="cs1-overview">Overview</button><button data-jump="cs1-workflow">Workflow</button><button data-jump="cs1-prototype">Prototype</button><button data-jump="cs1-build">Implementation</button><button data-jump="cs1-next">Next steps</button></div><div class="note">The original platform was a team effort. I contributed to its development and to translating research requirements into the annotation workflow. Sections marked <b>Concept</b> are my own exploratory ideas, not shipped features. I have not run interviews or usability tests, so I report no user outcomes.</div>
+<!-- EDIT: no public repo; research is confidential -->
+<p style="color:var(--mut)">Source code and data for this research project are not public.</p>
+<h2 id="cs1-overview" style="margin-top:1em">Overview and problem</h2>
+<p>The research needed trustworthy ground-truth labels for hard-to-read histopathology images. Only clinicians can supply them, and their time is limited. The problem: how do we make reviewing and labeling an image fast and clear enough that experts will do it carefully?</p>
+<h3>Target users</h3><p><b>Clinicians</b> who review images and give expert labels. <b>Researchers</b> who consume those labels as ground truth for diagnostic research and ML evaluation.</p>
+<h3>Needs and constraints</h3><p>Clinicians need a clear view of the image, a low-effort way to label, and confidence that their input was saved. Constraints I worked within: expert time, difficult images that invite uncertainty, and labels that must be consistent enough to evaluate models.</p>
+<h2 id="cs1-workflow">Workflow</h2>
+<div class="flow"><div>Open image<small>From review queue</small></div><div>Review image<small>Inspect tissue</small></div><div>Provide annotation<small>Expert judgment</small></div><div>Submit expert label<small>Saved to record</small></div><div>Ground truth<small>Dataset for research</small></div></div>
+<h3>User journey (clinician)</h3>
+<div class="grid"><div class="card"><b>Arrive</b><p>Needs to see what is waiting and how much is left.</p></div><div class="card"><b>Examine</b><p>Needs zoom and an uncluttered image. Pain point: ambiguous cases.</p></div><div class="card"><b>Label</b><p>Needs few, unambiguous choices and a way to flag uncertainty.</p></div><div class="card"><b>Confirm</b><p>Needs clear feedback that the label is submitted, then the next image.</p></div></div>
+<h2 id="cs1-prototype">Interface exploration <span class="tag c">Concept</span></h2>
+<p>An illustrative mockup of how I would structure the review screen. Select a label to try it. This is not a screenshot of the deployed platform.</p>
+<div class="prototype" id="annotation-prototype">
+<div class="prototype-head"><div><span class="tag c">Interactive portfolio concept</span><h3 style="margin:.4em 0">Clinician review workspace</h3><p class="muted">Illustrative sample cases and controls. This is not the live research platform and does not save clinical data.</p></div><span class="status-pill" id="ann-status">3 cases in queue</span></div>
+<div class="review-layout">
+<aside class="review-queue"><div class="queue-head"><b>Review queue</b><span id="queue-count">3 pending</span></div>
+<div id="review-list">
+<button class="queue-item active" data-case="0"><span class="case-thumb">H&amp;E</span><span><b>Case H-014</b><small>Cardiac tissue · difficult</small></span><span class="queue-dot"></span></button>
+<button class="queue-item" data-case="1"><span class="case-thumb">H&amp;E</span><span><b>Case H-021</b><small>Cardiac tissue · review</small></span><span class="queue-dot"></span></button>
+<button class="queue-item" data-case="2"><span class="case-thumb">H&amp;E</span><span><b>Case H-033</b><small>Cardiac tissue · flagged</small></span><span class="queue-dot"></span></button>
+</div><div class="queue-legend"><span>● Pending</span><span>✓ Reviewed</span><span>⚑ Flagged</span></div>
+</aside>
+<div class="review-main"><div class="review-toolbar"><div><b id="case-title">Case H-014</b><small id="case-meta">Image 1 of 3 · H&amp;E cardiac histopathology</small></div><span class="status-pill" id="case-state">Pending review</span></div>
+<div class="review-image-wrap"><div class="tissue-art" role="img" aria-label="Illustrative H and E stained tissue micrograph"><span class="tissue-vessel"></span><span class="tissue-label">ILLUSTRATIVE IMAGE</span></div><div class="image-tools"><button class="tool-button" data-zoom="in" aria-label="Zoom in">＋</button><button class="tool-button" data-zoom="out" aria-label="Zoom out">－</button><button class="tool-button" data-zoom="reset">Reset</button><span id="zoom-level">100%</span></div></div>
+<div class="annotation-form"><div><b>Expert annotation</b><p class="muted">Is an inflammatory region present in this image?</p><div class="choice-row" id="ann-choices"><button class="choice" data-label="Present">Present</button><button class="choice" data-label="Absent">Absent</button><button class="choice" data-label="Uncertain">Uncertain</button></div></div>
+<label class="field-label" for="ann-note">Review note <span class="muted">(optional)</span></label><textarea id="ann-note" rows="2" placeholder="Add context for the research team…"></textarea>
+<div class="ann-actions"><button class="btn" id="ann-submit">Submit review</button><button class="btn ghost" id="ann-fail">Simulate save failure</button></div>
+<div class="feedback" id="ann-feedback" role="status" aria-live="polite">Select an annotation to enable submission.</div>
+<div class="retry-row" id="ann-retry" hidden><button class="btn" id="ann-retry-button">Retry save</button><button class="text-button" id="ann-discard">Dismiss</button></div>
+</div></div></div>
+<div class="prototype-foot"><span>Prototype state is held locally in this browser session.</span><button class="text-button" id="ann-reset">Reset prototype</button></div>
+</div>
+<h3>Design decisions I would argue for</h3><p>Keep the image dominant, limit label choices, always offer an “unsure” path so doubt is recorded instead of forced, and show progress and a clear submit confirmation. These are proposals to validate with clinicians.</p>
+<h2 id="cs1-build">Technical implementation</h2><p>I supported image preparation and quality control for 6,627 H&amp;E images using OpenCV, NumPy, SciPy, MD5 and dHash for duplicate detection, so reviewers don’t spend time on bad or repeated images. I also developed an Attention U-Net for inflammatory region segmentation (83.76% F1, 81.68% precision, 85.95% recall) in the same project. These are model metrics, not usability results.</p>
+<h2 id="cs1-next">Learnings and next steps</h2><p>I learned that the label interface is part of data quality. Next, I would test the proposed flow with clinicians, measure review time and disagreement, and prototype it in Figma.</p></section>
+
+<!-- CS2 -->
+<section class="view" id="v-cs2"><div class="hero" style="padding-bottom:0"><span class="tag">Self project · June 2026 – present</span><h1>AI document management application</h1><p class="lead">Upload documents, track versions, see exactly what changed, and ask questions in plain language.</p></div><div class="case-subnav" aria-label="Case study sections"><span>ON THIS PAGE</span><button data-jump="cs2-problem">Problem</button><button data-jump="cs2-journey">Journey</button><button data-jump="cs2-mockups">Interface</button><button data-jump="cs2-architecture">Architecture</button><button data-jump="cs2-opportunities">Opportunities</button></div>
+<!-- EDIT: repo links for case study 2. Add your document-management repo here if it is public: <a class="btn ghost" href="YOUR-REPO-URL">Document app on GitHub</a> -->
+<p><a class="btn ghost" href="https://github.com/sachinkumarp-code/medical-knowledge-agent" target="_blank" rel="noopener">Agentic RAG source on GitHub</a></p>
+<div class="note">Implemented: FastAPI APIs, Next.js frontend, PDF parsing, versioning, comparison and agentic RAG. The mockups below are illustrative interface explorations. Items tagged Concept are proposals, not built features.</div>
+<h2 id="cs2-problem" style="margin-top:1em">User problem</h2><p>People keep many revisions of the same document and can’t easily tell what changed or find an answer buried in a file. I wanted one place to store documents, see differences clearly and ask questions.</p>
+<h3 id="cs2-journey">Journey</h3><div class="flow"><div>Upload PDF<small>Parse and store</small></div><div>Organize<small>Document list</small></div><div>New version<small>History kept</small></div><div>Compare<small>Added, removed, changed</small></div><div>Ask AI<small>Retrieve answers</small></div></div>
+<h2 id="cs2-mockups">Interface mockups</h2>
+<div class="tabs" data-tg="m2"><button class="on" data-t="d">Dashboard</button><button data-t="c">Comparison</button><button data-t="a">AI assistant <span class="tag c" style="margin:0">Concept panel</span></button></div>
+<div class="pn on" data-g="m2" id="d"><div class="mock"><div class="top"><i></i><i></i><i></i>&nbsp;Documents (illustrative)</div><div class="mb"><div class="sb"><span class="a">Documents</span><span>Versions</span><span>Compare</span><span>Ask AI</span></div><div class="mc"><div class="inp">Search documents…</div><div style="border:1px dashed var(--line);border-radius:8px;padding:10px;text-align:center;color:var(--mut);margin-bottom:10px">Drop a PDF here, or choose a file</div><table><tr><th>Name</th><th>Versions</th><th>Updated</th></tr><tr><td>Vendor agreement</td><td>v3</td><td>2 days ago</td></tr><tr><td>Policy handbook</td><td>v2</td><td>Last week</td></tr><tr><td>Project brief</td><td>v1</td><td>Last month</td></tr></table></div></div></div></div>
+<div class="pn" data-g="m2" id="c"><div class="mock"><div class="top"><i></i><i></i><i></i>&nbsp;Vendor agreement · v2 vs v3 (illustrative)</div><div class="mc"><div class="split"><div><b>v2</b><p>Payment is due within <span class="chg">30 days</span>.</p><p><span class="del">Either party may terminate with 7 days’ notice.</span></p><p>Support is available on weekdays.</p></div><div><b>v3</b><p>Payment is due within <span class="chg">45 days</span>.</p><p><span class="add">Either party may terminate with 30 days’ notice.</span></p><p>Support is available on weekdays.</p></div></div><p style="margin-top:12px"><span class="add">Added</span> <span class="del">Removed</span> <span class="chg">Changed</span></p></div></div></div>
+<div class="pn" data-g="m2" id="a"><div class="mock"><div class="top"><i></i><i></i><i></i>&nbsp;Ask your documents (concept)</div><div class="mc"><div class="chat"><div class="bub u">What is the payment term in the latest vendor agreement?</div><div class="bub">The latest version sets payment at 45 days. <span class="tag" style="margin:0">Source: Vendor agreement v3</span></div></div><div class="inp" style="margin-top:12px">Ask a question…</div></div></div></div>
+<h2 id="cs2-architecture">Technical architecture</h2><div class="flow"><div>Next.js<small>Interface</small></div><div>FastAPI<small>REST APIs</small></div><div>PyMuPDF<small>PDF parsing</small></div><div>SQLite + SQLAlchemy<small>Documents, versions</small></div><div>LangGraph agent<small>Routes to SQLite or ChromaDB</small></div></div><p>Tested with Pytest and GitHub Actions, and deployed with Docker Compose on AWS EC2.</p>
+<h2 id="cs2-opportunities">Design opportunities <span class="tag c">Concept</span></h2><p>Show source citations next to every AI answer, let people jump from an answer to the changed section, and add clear empty and error states for failed parsing. I haven’t user-tested any of this.</p></section>
+
+<!-- CS3 -->
+<section class="view" id="v-cs3"><div class="hero" style="padding-bottom:0"><span class="tag">Self project · research demo</span><h1>AI-powered medical image classification</h1><p class="lead">A brain-tumor MRI classification interface built with a PyTorch CNN, FastAPI and Streamlit, packaged with Docker Compose.</p></div><div class="case-subnav" aria-label="Case study sections"><span>ON THIS PAGE</span><button data-jump="cs3-problem">Problem</button><button data-jump="cs3-flow">Flow</button><button data-jump="cs3-states">Prototype</button><button data-jump="cs3-build">Implementation</button><button data-jump="cs3-next">Next steps</button></div>
+<!-- EDIT: repo link for case study 3 -->
+<p><a class="btn ghost" href="https://github.com/sachinkumarp-code/brain-tumor-classification" target="_blank" rel="noopener">View code on GitHub</a></p>
+<div class="note">This is a research and demo application. It is not a clinically validated diagnostic system and must not be used for medical decisions.</div>
+<h2 id="cs3-problem" style="margin-top:1em">User problem</h2><p>A learner or researcher wants to see how a model responds to an MRI image, without running code. The challenge is presenting an AI prediction without overstating certainty.</p>
+<h2 id="cs3-flow">Flow and states <span class="tag c">Illustrative mockup</span></h2>
+<div class="tabs" data-tg="m3"><button class="on" data-t="u">1. Upload</button><button data-t="p">2. Processing</button><button data-t="r">3. Result</button></div>
+<div class="pn on" data-g="m3" id="u"><div class="mock"><div class="mc" style="text-align:center;padding:30px"><b>Upload an MRI image</b><div style="border:1px dashed var(--mut);border-radius:10px;padding:26px;margin:12px 0;color:var(--mut)">Drop a JPG or PNG here</div><button class="btn" style="margin:0" data-go="p">Classify image</button><p style="color:var(--mut);margin:8px auto">Research demo only. Not for diagnosis.</p></div></div></div>
+<div class="pn" data-g="m3" id="p"><div class="mock"><div class="mc" style="padding:30px"><b>Analyzing image…</b><div class="bar" style="margin:14px 0"><b style="width:65%"></b></div><p style="color:var(--mut)">Usually takes a few seconds. You can cancel and upload a different image.</p></div></div></div>
+<div class="pn" data-g="m3" id="r"><div class="mock"><div class="mc"><div class="split"><div class="img" style="background:#2a2f36" role="img" aria-label="Placeholder MRI"></div><div><b>Model output</b><p style="margin:.3em 0">Predicted class: <b>Example class</b></p><div class="bar"><b style="width:82%"></b></div><small style="color:var(--mut)">Model confidence (placeholder value)</small><div class="note" style="margin-top:12px">Demo result. A model score is not a diagnosis. Consult a qualified clinician.</div></div></div></div></div></div>
+<h3 id="cs3-states">Interface considerations</h3><p>Show the demo disclaimer before upload and again beside the result, set expectations on wait time, present confidence as a model score rather than a verdict, and always allow trying another image.</p>
+<h2 id="cs3-build">Technical implementation</h2><p>I trained a PyTorch CNN, exposed it through a FastAPI backend, built the Streamlit interface and containerized everything with Docker Compose.</p>
+<h2 id="cs3-next">Limitations and next steps</h2><p>The model is not clinically validated, and the interface has had no formal usability testing. Next I would add uncertainty communication, accessibility checks and a clearer explanation of what the model does and doesn’t see.</p></section>
+
+<!-- CONCEPT -->
+<section class="view" id="v-concept"><div class="hero" style="padding-bottom:0"><span class="tag c">Self-initiated concept</span><h1>AI Learning Companion for students</h1><p class="lead">A concept for one place where students see their progress, get unstuck, find skill gaps and prepare for placements.</p></div><div class="case-subnav" aria-label="Case study sections"><span>ON THIS PAGE</span><button data-jump="concept-problem">Problem</button><button data-jump="concept-journey">Journey</button><button data-jump="concept-screens">Prototype</button><button data-jump="concept-rationale">Design rationale</button><button data-jump="concept-metrics">Success measures</button></div>
+<div class="note">This is my own concept, created for this portfolio. It is not a Newton School product and has not been built, tested or launched. Personas and flows are assumptions.</div>
+<h2 id="concept-problem" style="margin-top:1em">Problem</h2><p>Students juggling courses, practice and interview prep often can’t tell what to do next, where they’re weak, or if they’re ready for placements.</p>
+<h3>Target users</h3><p>Students preparing for tech roles, including career switchers, who study on their own schedule and need direction more than more content.</p>
+<h3 id="concept-journey">User journey</h3><div class="flow"><div>Sign in<small>See today’s plan</small></div><div>Learn<small>Recommended lesson</small></div><div>Get stuck<small>Ask the assistant</small></div><div>Review gaps<small>Skill map</small></div><div>Practice<small>Mock interview</small></div><div>Check readiness<small>Track over time</small></div></div>
+<h2 id="concept-screens">Screens</h2>
+<div class="learning-app" id="learning-prototype">
+<div class="learning-topbar"><div class="learning-brand"><span class="brand-mark">L</span><span><b>Learnwise</b><small>AI Learning Companion · Concept</small></span></div><div class="learner-chip"><span class="avatar">S</span><span>Sachin’s learning space</span></div></div>
+<div class="learning-shell">
+<aside class="learning-sidebar" aria-label="Learning prototype navigation">
+<p class="sidebar-label">YOUR WORKSPACE</p>
+<button class="learn-nav active" data-screen="dashboard">⌂ <span>Overview</span></button>
+<button class="learn-nav" data-screen="learn">▤ <span>My learning</span></button>
+<button class="learn-nav" data-screen="skills">◈ <span>Skill gaps</span></button>
+<button class="learn-nav" data-screen="assistant">✳ <span>AI doubt solver</span><i class="nav-dot"></i></button>
+<button class="learn-nav" data-screen="plan">☷ <span>Learning plan</span></button>
+<p class="sidebar-label">CAREER PREPARATION</p>
+<button class="learn-nav" data-screen="practice">◎ <span>Practice</span></button>
+<button class="learn-nav" data-screen="interview">▣ <span>Interview prep</span></button>
+<button class="learn-nav" data-screen="readiness">↗ <span>Placement readiness</span></button>
+<div class="sidebar-note"><b>Small steps count.</b><p>Your plan adapts as you learn and practise.</p></div>
+</aside>
+<div class="learning-content">
+<section class="learn-screen active" id="screen-dashboard">
+<div class="screen-heading"><div><span class="eyebrow">THURSDAY · YOUR LEARNING SPACE</span><h3>Good morning, Sachin</h3><p class="muted">A focused next step is better than a long to-do list.</p></div><span class="streak">⚡ 4-day practice streak</span></div>
+<div class="learning-stats"><div class="stat-card"><span>Course progress</span><b id="course-progress">60%</b><div class="mini-progress"><i id="course-bar" style="width:60%"></i></div><small>SQL foundations</small></div><div class="stat-card"><span>Skills to strengthen</span><b>3</b><small>Based on your recent practice</small></div><div class="stat-card"><span>Weekly learning time</span><b>4.5 hrs</b><small>Illustrative activity</small></div></div>
+<div class="dashboard-grid"><div class="learning-card next-card"><div class="card-kicker">PICK UP WHERE YOU LEFT OFF</div><h4>SQL joins and relationships</h4><p>Understand how rows from two tables connect, then practise with a real query.</p><div class="lesson-meta"><span>Lesson 6 of 10</span><span>12 min</span></div><div class="mini-progress"><i style="width:60%"></i></div><button class="btn" data-open-screen="learn">Continue lesson →</button></div><div class="learning-card"><div class="card-kicker">A GOOD NEXT STEP</div><h4>Strengthen recursion</h4><p>Your recent practice suggests this topic needs another pass.</p><button class="text-button" data-open-screen="skills">Review skill gaps →</button></div><div class="learning-card"><div class="card-kicker">ASK WHEN YOU GET STUCK</div><h4>Learn with an AI tutor</h4><p>Get a step-by-step explanation, an example and a check for understanding.</p><button class="text-button" data-open-screen="assistant">Ask a question →</button></div><div class="learning-card"><div class="card-kicker">CAREER GOAL</div><h4>Build interview confidence</h4><p>Practise SQL, Python and explaining your projects.</p><button class="text-button" data-open-screen="readiness">View readiness →</button></div></div>
+</section>
+<section class="learn-screen" id="screen-learn">
+<div class="screen-heading"><div><span class="eyebrow">MY LEARNING</span><h3>Build skills in sequence</h3><p class="muted">Short lessons connected to practice, not isolated videos.</p></div></div>
+<div class="learning-card lesson-feature"><div class="lesson-illustration">SQL<br><span>FOUNDATIONS</span></div><div><span class="tag">IN PROGRESS</span><h4>SQL foundations</h4><p>From selecting records to combining related tables.</p><div class="lesson-meta"><span id="lesson-count">6 of 10 lessons complete</span><span>~2.5 hours left</span></div><div class="mini-progress"><i id="lesson-progress" style="width:60%"></i></div><button class="btn" id="complete-lesson">Mark next lesson complete</button><p class="feedback" id="lesson-feedback" role="status">Complete a lesson to update your progress.</p></div></div>
+<h4 class="subheading">Recommended next lessons</h4><div class="lesson-list"><div><span class="lesson-number">07</span><span><b>INNER JOIN vs LEFT JOIN</b><small>12 min · Recommended</small></span><span class="tag">Next</span></div><div><span class="lesson-number">08</span><span><b>GROUP BY and aggregation</b><small>15 min · Builds on joins</small></span></div><div><span class="lesson-number">09</span><span><b>Subqueries</b><small>18 min · Intermediate</small></span></div></div>
+</section>
+<section class="learn-screen" id="screen-skills">
+<div class="screen-heading"><div><span class="eyebrow">SKILL GAP ANALYSIS</span><h3>Know what to work on next</h3><p class="muted">Example diagnostic based on a fictional practice history. Not measured learner data.</p></div></div>
+<div class="learning-card"><div class="skill-row"><span><b>SQL querying</b><small>Comfortable with core SELECT queries</small></span><b class="skill-level">Strong</b><div class="skill-track"><i style="width:82%"></i></div></div><div class="skill-row"><span><b>Joins &amp; aggregation</b><small>Needs more mixed-table practice</small></span><b class="skill-level mid">Developing</b><div class="skill-track"><i style="width:56%"></i></div></div><div class="skill-row"><span><b>Python recursion</b><small>Review base cases and call stack</small></span><b class="skill-level low">Needs focus</b><div class="skill-track"><i style="width:34%"></i></div></div><div class="skill-row"><span><b>Problem explanation</b><small>Practise explaining approach before code</small></span><b class="skill-level mid">Developing</b><div class="skill-track"><i style="width:48%"></i></div></div></div>
+<div class="learning-card gap-action"><div><span class="tag c">Recommended focus</span><h4>Recursion: build confidence with 3 small problems</h4><p>Start with a base case, trace one call, then solve a simple variation.</p></div><button class="btn" data-open-screen="practice">Start practice →</button></div>
+</section>
+<section class="learn-screen" id="screen-assistant">
+<div class="screen-heading"><div><span class="eyebrow">AI DOUBT SOLVER</span><h3>Ask. Understand. Try it yourself.</h3><p class="muted">A local scripted demo of an assistant flow; no external AI API is connected.</p></div></div>
+<div class="chat-panel"><div class="chat-context"><span class="avatar">✳</span><span><b>Learning assistant</b><small>Uses examples and checks understanding</small></span><span class="online-indicator">Demo</span></div><div class="chat-messages" id="chat-messages" aria-live="polite"><div class="chat-message assistant-message"><b>Let’s work through it together.</b><p>What are you learning right now? I can explain a concept, walk through an example or help debug your thinking.</p></div></div><div class="quick-prompts"><button class="prompt-chip">Explain SQL joins simply</button><button class="prompt-chip">What is recursion?</button><button class="prompt-chip">How do I debug a Python loop?</button></div><form id="chat-form" class="chat-input-row"><label class="sr-only" for="chat-input">Ask the learning assistant</label><input id="chat-input" placeholder="Type your question…" autocomplete="off"><button class="btn" type="submit">Send</button></form></div>
+</section>
+<section class="learn-screen" id="screen-plan">
+<div class="screen-heading"><div><span class="eyebrow">PERSONALIZED LEARNING PLAN</span><h3>Your week, made actionable</h3><p class="muted">A suggested plan balancing learning, practice and interview preparation.</p></div><span class="tag">Example plan</span></div>
+<div class="plan-summary"><div><b>5</b><small>focused sessions</small></div><div><b>4.5 hrs</b><small>estimated effort</small></div><div><b>1</b><small>career checkpoint</small></div></div>
+<div class="plan-list"><label><input type="checkbox" checked> <span><b>Monday · SQL joins lesson</b><small>Learn the difference between INNER and LEFT JOIN · 25 min</small></span></label><label><input type="checkbox"> <span><b>Tuesday · SQL practice</b><small>Solve 3 join questions · 35 min</small></span></label><label><input type="checkbox"> <span><b>Wednesday · Python recursion</b><small>Trace 2 examples and solve 1 problem · 40 min</small></span></label><label><input type="checkbox"> <span><b>Thursday · Doubt review</b><small>Ask the tutor and explain the concept back · 20 min</small></span></label><label><input type="checkbox"> <span><b>Friday · Interview practice</b><small>Explain one project and answer 2 SQL questions · 40 min</small></span></label></div><p class="feedback" id="plan-feedback" role="status">0 of 5 sessions completed.</p>
+</section>
+<section class="learn-screen" id="screen-practice">
+<div class="screen-heading"><div><span class="eyebrow">PRACTICE &amp; ASSESSMENT</span><h3>Check your understanding</h3><p class="muted">One short question to make learning active.</p></div><span class="tag">SQL · Beginner</span></div>
+<div class="learning-card quiz-card"><div class="quiz-meta">QUESTION 1 OF 1 · CONCEPT CHECK</div><h4>You have two tables: Students and Enrollments. Which JOIN keeps every student, including those with no enrollment?</h4><div class="quiz-options" id="quiz-options"><button data-answer="a">A. INNER JOIN</button><button data-answer="b">B. LEFT JOIN</button><button data-answer="c">C. CROSS JOIN</button></div><div id="quiz-feedback" class="feedback" role="status">Choose an answer to see an explanation.</div><button class="text-button" id="quiz-reset">Try again</button></div>
+</section>
+<section class="learn-screen" id="screen-interview">
+<div class="screen-heading"><div><span class="eyebrow">INTERVIEW PREPARATION</span><h3>Practise explaining your thinking</h3><p class="muted">A lightweight mock interview prompt with a self-review checklist.</p></div></div>
+<div class="learning-card interview-card"><span class="tag">BEHAVIOURAL · PROJECT STORY</span><h4 id="interview-question">Tell me about a project where you translated a complex user or domain need into a working tool.</h4><p class="muted">Take 2 minutes. Structure your answer around context, your contribution, decisions and what you learned.</p><button class="btn" id="next-question">Next question</button><div class="self-review"><b>Before you finish, check:</b><label><input type="checkbox"> Did I explain the problem clearly?</label><label><input type="checkbox"> Did I distinguish my contribution from the team’s?</label><label><input type="checkbox"> Did I explain a decision and its trade-off?</label></div></div>
+</section>
+<section class="learn-screen" id="screen-readiness">
+<div class="screen-heading"><div><span class="eyebrow">PLACEMENT READINESS</span><h3>Make preparation visible</h3><p class="muted">An illustrative checklist, not a hiring prediction or validated score.</p></div></div>
+<div class="readiness-card"><div class="readiness-ring"><b id="readiness-value">45%</b><small>example progress</small></div><div><h4>Readiness is built from evidence</h4><p>Track the habits and skills you can influence. This concept avoids presenting a score as a guarantee of placement.</p><div class="readiness-items"><span>✓ Learning foundations</span><span>○ Consistent problem practice</span><span>○ Project storytelling</span><span>○ Mock interview experience</span></div></div></div>
+<div class="learning-card"><h4>Suggested next milestone</h4><p>Complete one SQL practice set, then explain a project in a two-minute mock interview.</p><button class="btn" data-open-screen="practice">Start a practice check →</button></div>
+</section>
+</div></div>
+<div class="learning-disclaimer">Concept prototype only · All learner activity, progress, skill levels and recommendations shown here are illustrative. No student account, learning history or Newton School system is connected.</div>
+</div>
+<h2 id="concept-rationale">Interaction details and rationale</h2><p>One primary action on Home (“Continue”) reduces choice overload. The assistant sits one tap away on every lesson and quotes the lesson it draws from. Readiness is shown with its inputs so students understand it, instead of a bare score. Skill gaps lead directly to a practice set.</p>
+<h2 id="concept-metrics">Success metrics to measure after launch</h2><div class="grid"><div class="card">Weekly active learners</div><div class="card">Lesson completion rate</div><div class="card">Time from doubt to resolution</div><div class="card">Practice sets finished after a skill-gap prompt</div><div class="card">Mock interview attempts per student</div></div>
+<p>I would validate this with student interviews and a clickable prototype first.</p></section>
+
+<!-- ABOUT -->
+<section class="view" id="v-about"><div class="hero"><h1>About me</h1><p class="lead">I’m doing an M.Tech in Structural and Computational Biology at IIT Roorkee, after a B.Tech in Industrial Biotechnology.</p></div>
+<p>Before my M.Tech I worked as a Project Associate at the Indian Institute of Science, where I built Python data workflows and Streamlit dashboards, helped prototype an Arduino-based PCR diagnostic device and coordinated operations for a healthcare programme. At IIT Roorkee I worked on data preparation for H&amp;E whole-slide images and now contribute to a clinician-facing annotation workflow.</p>
+<p>My strength is combining implementation with an understanding of what people need. I’m early in my design career, and I’m learning Figma and formal research methods next.</p>
+<h2>Skills and tools</h2>
+<div class="grid"><div class="card"><b>Product and design</b><p>Product thinking, user workflow analysis, problem solving, product prototyping, human-centered technology.</p></div><div class="card"><b>Development</b><p>Python, FastAPI, REST APIs, Next.js, Streamlit, SQLite, SQLAlchemy.</p></div><div class="card"><b>AI and machine learning</b><p>PyTorch, LangGraph, RAG, ChromaDB, Hugging Face embeddings.</p></div><div class="card"><b>Development tools</b><p>Claude Code, OpenCode, Git, GitHub, Docker, Pytest, GitHub Actions, AWS EC2.</p></div></div>
+<div class="note">Next on my learning path: Figma, structured user research and usability testing.</div></section>
+
+<!-- CONTACT -->
+<section class="view" id="v-contact"><div class="hero"><h1>Let’s talk</h1><p class="lead">I’d love to discuss the Product Designer role at Newton School, Bengaluru.</p>
+<a class="btn" href="mailto:sachinkumar_p@bt.iitr.ac.in">Email me</a><a class="btn ghost" href="https://github.com/sachinkumarp-code" target="_blank" rel="noopener">GitHub</a><!-- EDIT: confirm your LinkedIn URL --><a class="btn ghost" href="https://www.linkedin.com/in/sachinkumar-p-965542247/" target="_blank" rel="noopener">LinkedIn</a><a class="btn ghost" href="/resume.pdf" target="_blank" rel="noopener">View resume</a>
+<p style="margin-top:20px">sachinkumar_p@bt.iitr.ac.in<br>Indian Institute of Technology Roorkee</p></div>
+<!-- EDIT: add or remove repositories in this grid -->
+<h2 style="margin-top:0">Code on GitHub</h2>
+<div class="grid">
+<a class="card" href="https://github.com/sachinkumarp-code/medical-knowledge-agent" target="_blank" rel="noopener"><b>medical-knowledge-agent</b><p>LangGraph agent over SQLite and ChromaDB.</p></a>
+<a class="card" href="https://github.com/sachinkumarp-code/brain-tumor-classification" target="_blank" rel="noopener"><b>brain-tumor-classification</b><p>MRI classification research demo.</p></a>
+<a class="card" href="https://github.com/sachinkumarp-code/ai-terminal-chat" target="_blank" rel="noopener"><b>ai-terminal-chat</b><p>Terminal AI assistant.</p></a></div></section>
+</main>
+<footer><div class="wrap"><a href="https://github.com/sachinkumarp-code" target="_blank" rel="noopener">GitHub</a> · Sachinkumar P · Interface mockups are illustrative and are not screenshots of deployed products.</div></footer>
+<div class="toast" id="ts"></div>
+<script type="module" src="/src/main.js"></script></body></html>
